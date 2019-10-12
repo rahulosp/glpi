@@ -27,6 +27,10 @@ cron \
 wget \
 jq
 
+#Create Volume mapping for docker
+VOLUME /var/www/html
+
+WORKDIR /var/www/html
 #Copie et execution du script pour l'installation et l'initialisation de GLPI
 COPY glpi-start.sh /opt/
 RUN chmod +x /opt/glpi-start.sh
