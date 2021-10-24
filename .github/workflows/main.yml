@@ -39,4 +39,4 @@ jobs:
         with:
           config: ${{ secrets.KUBE_CONFIG_DATA }}
           command: |
-            set image deployment/glpi glpi=$"DOCKER_USER"/glpi:dev-$GITHUB_RUN_NUMBER --namespace rahglpi
+            set image deployment/glpi glpi=$DOCKER_USER/glpi:dev-$GITHUB_RUN_NUMBER --namespace rahglpi
